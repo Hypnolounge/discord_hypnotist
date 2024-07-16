@@ -20,21 +20,7 @@
           <v-icon v-else>fas fa-user</v-icon>
         </v-avatar>
 
-        <v-menu activator="parent">
-          <v-list>
-            <v-list-item
-              v-for="(item, index) in items"
-              :key="index"
-              :value="index"
-              @click="item.click"
-            >
-              <template v-slot:prepend>
-                <v-icon>{{ item.icon }}</v-icon>
-              </template>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
+        <UserMenu />
       </template>
     </v-app-bar>
     <v-main>
