@@ -1,3 +1,15 @@
+<script setup lang="ts">
+definePageMeta({
+  middleware: [
+    async function(to, from) {
+      if(!(await useUserStore().isLoggedIn())) {
+        return navigateTo("/login");
+      }
+    }
+  ]
+});
+</script>
+
 <template>
   <v-container
     class="d-flex flex-column align-center justify-center"
@@ -11,8 +23,8 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  mounted() {
-    useUserStore().logout();
+  async mounted() {
+    await useUserStore().logout();
   },
 });
 </script>

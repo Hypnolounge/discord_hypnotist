@@ -8,7 +8,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
   ssr: false,
+
   runtimeConfig: {
     // Will be available in both client and server
     discordApiId: "1126085790259224586",
@@ -27,9 +29,11 @@ export default defineNuxtConfig({
         "https://discord.com/oauth2/authorize?client_id=1126085790259224586&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Flogin&scope=identify",
     },
   },
+
   build: {
     transpile: ["vuetify"],
   },
+
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -39,6 +43,7 @@ export default defineNuxtConfig({
     },
     "@pinia/nuxt",
   ],
+
   vite: {
     vue: {
       template: {
@@ -46,9 +51,12 @@ export default defineNuxtConfig({
       },
     },
   },
+
   nitro: {
     experimental: {
       database: true,
     },
   },
+
+  compatibilityDate: "2024-07-22",
 });

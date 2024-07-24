@@ -1,6 +1,13 @@
 <script setup lang="ts">
 definePageMeta({
   layout: "auth",
+  middleware: [
+    async function(to, from) {
+      if(await useUserStore().isLoggedIn()) {
+        return navigateTo("/");
+      }
+    }
+  ]
 });
 </script>
 

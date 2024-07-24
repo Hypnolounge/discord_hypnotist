@@ -1,5 +1,13 @@
-<script lang="ts">
-
+<script setup lang="ts">
+definePageMeta({
+  middleware: [
+    async function(to, from) {
+      if(await useUserStore().isVerified()) {
+        return navigateTo("/");
+      }
+    }
+  ]
+});
 </script>
 
 <template>
