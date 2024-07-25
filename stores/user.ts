@@ -1,16 +1,3 @@
-declare interface UserResponse {
-  statusCode: number;
-  body: {
-    user: {
-      avatar: string;
-      displayname: string;
-      verified: boolean;
-      admin: boolean;
-      noSession: boolean;
-    };
-  };
-}
-
 export const useUserStore = defineStore("userStore", {
   state: () => ({
     displayname: "Name",
@@ -29,7 +16,7 @@ export const useUserStore = defineStore("userStore", {
         return { avatar: this.avatar, displayname: this.displayname };
       }
       try {
-        const user = (await $fetch<UserResponse>("/api/users/me")).body.user;
+        const user = (await $fetch("/api/users/me")).body.user;
         this.avatar = user.avatar;
         this.displayname = user.displayname;
         this.verified = user.verified;

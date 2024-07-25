@@ -1,21 +1,12 @@
 import { GuildMember } from "discord.js";
 
-interface HLApp {
-    id: string;
-    name: string;
-    description: string;
-    image: string;
-    route: string;
-    permissions: string[];
-}
-
 const registeredApps: HLApp[] = [
     {
         id: "hypnotist",
         name: "Hypnotist",
         description: "The new way to hypnotize yourself",
-        image: "https://hypnolounge.com/assets/hypnotist.png",
-        route: "/hypnotist",
+        image: "https://t3.ftcdn.net/jpg/00/38/44/04/360_F_38440431_8m7O1ZA0KUF38wmqEFEG4I8U0fujP7MN.jpg",
+        route: "/apps/hypnotist",
         permissions: ["verified"],
     },
 ]

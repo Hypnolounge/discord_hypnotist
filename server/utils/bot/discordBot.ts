@@ -54,3 +54,8 @@ export function isMemberAdmin(member: GuildMember) {
   if (!member) return false;
   return member.permissions.has("Administrator");
 }
+
+export function checkMemberInChannel(member: GuildMember) {
+  if (!member) return false;
+  
+}

@@ -39,7 +39,6 @@ definePageMeta({
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
 const config = useRuntimeConfig();
 
 export default defineComponent({

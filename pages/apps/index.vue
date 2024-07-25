@@ -6,7 +6,7 @@
           class="mx-auto border"
           width="300"
           type="image, article"
-          v-if="!success"
+          v-if="!success && !fail"
         ></v-skeleton-loader>
         <v-alert v-if="fail" type="error" outlined class="mx-auto"
           >An error occured</v-alert

@@ -10,16 +10,20 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@dank074/discord-video-stream": "^3.2.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@mdi/font": "^7.4.47",
     "@pinia/nuxt": "^0.5.1",
+    "better-sqlite3": "^11.1.2",
     "discord.js": "^14.15.3",
+    "discord.js-selfbot-v13": "^3.3.0",
     "nuxt": "^3.12.2",
     "vue": "latest"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
-    "better-sqlite3": "^11.1.2",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.6.10"
   }
