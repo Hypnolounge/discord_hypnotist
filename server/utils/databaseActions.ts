@@ -19,7 +19,6 @@ export async function loginUser(token: string) {
   );
 
   response.avatar = `https://cdn.discordapp.com/avatars/${response.id}/${response.avatar}.png`;
-
   try {
     const result = await db.sql`INSERT INTO users (session, id, token, displayname, avatar) VALUES (${response.id}, ${response.id}, ${token}, ${response.globalName||response.username}, ${response.avatar})`;
   }

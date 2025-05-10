@@ -53,7 +53,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  setCookie(event, "auth", id, {
+  setCookie(event, useRuntimeConfig().cookieName, id, {
     httpOnly: true,
   });
 

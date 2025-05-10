@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
     return;
   }
 
-  const cookie = getCookie(event, "auth") || "";
+  const cookie = getCookie(event, useRuntimeConfig().cookieName) || "";
 
   const user = await getUser(cookie);
   event.context.sessionUser = user;

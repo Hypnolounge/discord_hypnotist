@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     discordApiSecret: "",
     disocrdApiRedirectUri: "http://localhost:3000/login",
     discordApiUrl: "https://discord.com/api/v10",
+    cookieName: "auth",
     discordBotToken: "",
     memberRoles: [
       "1125010023534305321",
